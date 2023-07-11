@@ -2,57 +2,82 @@ import React from "react";
 
 const Resume = () => {
   return (
-    <div className="border border-lime-400">
-      <div >
-        <div className="flex justify-center text-left overflow-x-auto">
-          <table>
-            <tr>
-              <th className="text-2xl">My Education</th>
-              <th className="text-2xl">My Experience</th>
-            </tr>
-            <tr>
-              <td>
-                <p className="bg-lime-400 inline-block rounded-md px-2">2014 - 2018</p>
-                <h1 className="text-xl"> Bachelor of Engineering</h1>
-                <p>Savitribai Phule Pune University</p>
-              </td>
-              <td>
-                <p className="bg-lime-400 inline-block rounded-md px-2">03/2022 - Current</p>
-                <h1 className="text-xl">Software Engineer</h1>
-                <p>TechnoPro Engineering</p>
-              </td>
-            </tr>
-            <tr>
-              <td>
-                <p className="bg-lime-400 inline-block rounded-md px-2">2012 - 2014</p>
-                <h1 className="text-xl">Higher Secondary Education</h1>
-                <p>Pune University</p>
-              </td>
-              <td>
-                <p className="bg-lime-400 inline-block rounded-md px-2">07/2021 - 01/2022</p>
-                <h1 className="text-xl">Associate Consultant</h1>
-                <p>Capgemini Technology Services</p>
-              </td>
-            </tr>
-            <tr>
-              <td>
-                <p className="bg-lime-400 inline-block rounded-md px-2">2007 - 2012</p>
-                <h1 className="text-xl">Secondary School Education</h1>
-                <p>Pune University</p>
-              </td>
-              <td>
-                <p className="bg-lime-400 inline-block rounded-md px-2">12/2018 - 07/2021</p>
-                <h1 className="text-xl">Programmer Analyst</h1>
-                <p>Cognizant Technology Solutions</p>
-              </td>
-            </tr>
-          </table>
-        </div>
-        <div></div>
+    <div>
+      <div className="flex justify-center items-center border border-red-900">
+        <h1 className="text-8xl opacity-5 relative">SUMMARY</h1>
+        <p className="absolute mt-6 mb-6 text-4xl ">Resume</p>
+        <span className="border absolute mt-10    border-teal-500 w-20"></span>
       </div>
-      <div>skills</div>
-      <div>My Hobbbies</div>
-      <button>Download CV</button>
+      <div className="flex justify-center max-sm:flex-col max-sm:justify-center" id="summary-container">
+        <div id="education-container" className="m-4 w-1/2 max-w-xl max-sm:w-auto">
+          left
+          <h1>My Education</h1>
+          <div
+            id="education-card"
+            className="border border-gray-400 rounded-lg p-6 mb-5">
+            <p className="text-center bg-cyan-800 rounded-lg inline-block px-4 ">
+              2014 - 2018
+            </p>
+            <h1 className="text-2xl py-2">Bachelor of Enginerring</h1>
+            <p>Savitribai Phule Pune University</p>
+
+          </div>
+          <div
+            id="education-card"
+            className="border border-gray-400 rounded-lg p-6 mb-5">
+            <p className="text-center bg-cyan-800 rounded-lg inline-block px-4 ">
+              2014 - 2018
+            </p>
+            <h1 className="text-2xl py-2">Bachelor of Enginerring</h1>
+            <p>Savitribai Phule Pune University</p>
+
+          </div>
+          <div
+            id="education-card"
+            className="border border-gray-400 rounded-lg p-6 mb-5">
+            <p className="text-center bg-cyan-800 rounded-lg inline-block px-4 ">
+              2014 - 2018
+            </p>
+            <h1 className="text-2xl py-2">Bachelor of Enginerring</h1>
+            <p>Savitribai Phule Pune University</p>
+
+          </div>
+        </div>"
+        <div id="experiance-container" className="m-4 w-1/2 max-w-xl max-sm:w-auto">
+          right
+          <h1>My Experiance</h1>
+          <div
+            id="experiance-card"
+            className="border border-gray-400 rounded-lg p-6 mb-5">
+            <p className="text-center bg-cyan-800 rounded-lg inline-block px-4 ">                               
+              2014 - 2018                                                       
+            </p>
+            <h1 className="text-2xl py-2">Bachelor of Enginerring</h1>
+            <p>Savitribai Phule Pune University</p>
+
+          </div>
+          <div
+            id="experiance-card"
+            className="border border-gray-400 rounded-lg p-6 mb-5">
+            <p className="text-center bg-cyan-800 rounded-lg inline-block px-4 ">
+              2014 - 2018
+            </p>
+            <h1 className="text-2xl py-2">Bachelor of Enginerring</h1>
+            <p>Savitribai Phule Pune University</p>
+
+          </div>
+          <div
+            id="experiance-card"
+            className="border border-gray-400 rounded-lg p-6 mb-5                                                                                                           ">
+            <p className="text-center bg-cyan-800 rounded-lg inline-block px-4 ">
+              2014 - 2018
+            </p>
+            <h1 className="text-2xl py-2">Bachelor of Enginerring</h1>
+            <p>Savitribai Phule Pune University</p>
+
+          </div>
+        </div>
+      </div>
     </div>
   );
 };

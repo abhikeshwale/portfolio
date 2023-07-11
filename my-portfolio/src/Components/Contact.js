@@ -4,10 +4,28 @@ const Contact = () => {
   return (
     <div>
       <div>
-        Contact
-        <h1>Contact</h1>
-        <p>Get in Touch</p>
-        <span className="border border-teal-500 w-5"></span>
+        <div className="flex justify-center items-center border border-red-900">
+          <h1 className="text-8xl opacity-5 relative">GET IN TOUCH</h1>
+          <p className="absolute mt-6 mb-6 text-4xl ">Contact</p>
+          <span className="border absolute mt-10    border-teal-500 w-20"></span>
+        </div>
+
+        <div>
+          left
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+        <div>
+          right
+          <form>
+            <h1>SEND ME A NOTE</h1>
+            <div>
+              <input></input>
+            </div>
+            <button> </button>
+          </form>
+        </div>
       </div>
       <div>
         left div
