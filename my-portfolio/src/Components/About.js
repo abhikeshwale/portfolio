@@ -1,16 +1,13 @@
 import React, { useState } from "react";
+import TitleCard from "./TitleCard";
 const About = () => {
   return (
-    <div className="pt-32 pb-32 flex flex-col justify-center items-center border border-red-500">
-      <div className="flex text-center relative">
-        <h1 className="opacity-5 text-7xl mt-0 -mb-2">ABOUT ME</h1>
-        <p className="text-4xl font-bold leading-10 absolute ">Know Me More</p>
-        <span className="border border-blue-400 w-48 border-opacity-80 mb-11"></span>
-      </div>
-
+    <div className="pt-32 pb-32 flex flex-col justify-center m-4 items-center border border-red-500">
+    
+      <TitleCard title="ABOUT ME" subTitle="Know Me More"/>
       <div className="flex justify-center ">
-        <div className="flex-col">
-          <h2 className="text-3xl font-bold">
+        <div className="flex-col  w-2/3 max-w-2xl" id="about-container">
+          <h2 className="text-3xl font-bold" >
             I'm <span className="text-blue-300">Abhikesh Wale,</span> a FrontEnd
             Developer
           </h2>
@@ -24,7 +21,7 @@ const About = () => {
             voluptate velip proidentollorum.
           </p>
         </div>
-        <div className="flex flex-1 flex-col w-1/4">
+        <div className="flex flex-1 flex-col w-1/3 max-w-md" id="personal-info-container">
           <table>
             <tr>
               <td>
@@ -49,7 +46,7 @@ const About = () => {
           </table>
         </div>
       </div>
-      <div>
+      <div id="about-summury-container">
         <table>
           <tr>
             <th>4.5+</th>
