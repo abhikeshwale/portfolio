@@ -27,7 +27,8 @@ const Contact = () => {
       <div className="flex justify-center  max-sm:flex-col max-sm:justify-center">
         <div
           id="address-container"
-          className="flex  flex-col gap-5 m-4 w-1/3 max-w-md max-sm:w-auto">
+          className="flex  flex-col gap-5 m-4 w-1/3 max-w-[440px] max-sm:w-auto"
+        >
           <div>
             <div className="flex cursor-text">
               <ItemNameCard name="ADDRESS" />
@@ -84,7 +85,6 @@ const Contact = () => {
                 <li>
                   <FontAwesomeIcon
                     icon={faTwitter}
-                  
                     className="hover:text-blue-600 cursor-pointer text-2xl"
                   />
                 </li>
@@ -94,7 +94,8 @@ const Contact = () => {
         </div>
         <div
           id="contact-container"
-          className=" m-4 w-2/3 max-w-[45rem] max-sm:w-auto  p-4 rounded-xl">
+          className=" m-4 w-2/3 max-w-[880px] max-sm:w-auto  p-4 rounded-xl"
+        >
           <Formik
             initialValues={{
               name: "",
@@ -118,7 +119,8 @@ const Contact = () => {
                 errors.message = "Message Required";
               }
               return errors;
-            }}>
+            }}
+          >
             {() => (
               <Form className="flex">
                 <div className="flex flex-col gap-4 w-full">
@@ -157,9 +159,10 @@ const Contact = () => {
                     <button
                       type="submit"
                       onSubmit={handleSubmit}
-                      className="ml-[35%] max-sm:ml-[25%] hover:shadow-xl hover:text-red-500 rounded-lg p-4 border hover:animate-pulse">
-                      Send Message {" "}
-                      <FontAwesomeIcon 
+                      className="ml-[35%] max-sm:ml-[25%] hover:shadow-xl hover:text-red-500 rounded-lg p-4 border hover:animate-pulse"
+                    >
+                      Send Message{" "}
+                      <FontAwesomeIcon
                         icon={faPaperPlane}
                         className="hover:animate-bounce"
                       />
