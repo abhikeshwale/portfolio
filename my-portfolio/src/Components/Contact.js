@@ -22,12 +22,13 @@ const Contact = () => {
     console.log("submitting form");
   };
   return (
-    <div>
+    <div id="contact">
       <TitleCard title="GET IN TOUCH" subTitle="Contact" />
       <div className="flex justify-center  max-sm:flex-col max-sm:justify-center">
         <div
           id="address-container"
-          className="flex  flex-col gap-5 m-4 w-1/3 max-w-md max-sm:w-auto">
+          className="flex  flex-col gap-5 m-4 w-1/4 max-w-[330px] max-sm:w-auto"
+        >
           <div>
             <div className="flex cursor-text">
               <ItemNameCard name="ADDRESS" />
@@ -84,7 +85,6 @@ const Contact = () => {
                 <li>
                   <FontAwesomeIcon
                     icon={faTwitter}
-                  
                     className="hover:text-blue-600 cursor-pointer text-2xl"
                   />
                 </li>
@@ -94,7 +94,8 @@ const Contact = () => {
         </div>
         <div
           id="contact-container"
-          className=" m-4 w-2/3 max-w-[45rem] max-sm:w-auto  p-4 rounded-xl">
+          className=" m-4 w-3/4 max-w-[990px] max-sm:w-auto  p-4 rounded-xl"
+        >
           <Formik
             initialValues={{
               name: "",
@@ -118,28 +119,31 @@ const Contact = () => {
                 errors.message = "Message Required";
               }
               return errors;
-            }}>
+            }}
+          >
             {() => (
               <Form className="flex">
-                <div className="flex flex-col gap-4 w-full">
-                  <div>
-                    <Field
-                      name="name"
-                      placeholder="Name"
-                      className="border rounded-md p-2 w-[100%]"
-                    />
-                    <div className="text-red-500 text-sm italic">
-                      <ErrorMessage name="name" />
+                <div className="flex flex-col justify-center gap-4 w-full">
+                  <div className="flex justify-between gap-8">
+                    <div className="w-1/2">
+                      <Field
+                        name="name"
+                        placeholder="Name"
+                        className="border text-xl h-[50px] rounded-md p-2 w-[100%]"
+                      />
+                      <div className="text-red-500 text-sm italic">
+                        <ErrorMessage name="name" />
+                      </div>
                     </div>
-                  </div>
-                  <div>
-                    <Field
-                      name="email"
-                      placeholder="Email"
-                      className="border rounded-md p-2 w-[100%]"
-                    />
-                    <div className="text-red-500 text-sm italic">
-                      <ErrorMessage name="email" />
+                    <div className="w-1/2">
+                      <Field
+                        name="email"
+                        placeholder="Email"
+                        className="border text-xl h-[50px] rounded-md p-2 w-[100%]"
+                      />
+                      <div className="text-red-500 text-sm italic">
+                        <ErrorMessage name="email" />
+                      </div>
                     </div>
                   </div>
                   <div>
@@ -147,19 +151,20 @@ const Contact = () => {
                       name="message"
                       placeholder="Your Message..."
                       component="textarea"
-                      className="border rounded-md p-2 w-[100%] min-h-[70px]"
+                      className="border text-xl rounded-md p-2 w-[100%] min-h-[150px]"
                     />
                     <div className="text-red-500 text-sm italic">
                       <ErrorMessage name="message" />
                     </div>
                   </div>
-                  <div>
+                  <div className="flex justify-center                  ">
                     <button
                       type="submit"
                       onSubmit={handleSubmit}
-                      className="ml-[35%] max-sm:ml-[25%] hover:shadow-xl hover:text-red-500 rounded-lg p-4 border hover:animate-pulse">
-                      Send Message {" "}
-                      <FontAwesomeIcon 
+                      className="border m-1 p-2 hover:scale-110 duration-75 rounded-full px-3 border-orange-400 hover:border-2 hover:bg-orange-300 hover:border-orange-600 "
+                      >
+                      Send Message
+                      <FontAwesomeIcon
                         icon={faPaperPlane}
                         className="hover:animate-bounce"
                       />
