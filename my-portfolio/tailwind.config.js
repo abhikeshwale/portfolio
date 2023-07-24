@@ -7,9 +7,10 @@ module.exports = {
     extend: {
       fontFamily: {
         sans: ["Poppins", "sans-serif"],
+        pacifico: ["Damion", "cursive"],
       },
       backgroundImage: {
-        bg: "url(./assets/bg.jpg)",
+        bg: "url(./assets/background-image.jpg)",
       },
     },
     height: {

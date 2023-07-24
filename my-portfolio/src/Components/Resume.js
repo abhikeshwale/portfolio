@@ -9,14 +9,16 @@ const Resume = () => {
     const { name, percent } = skills;
     return (
       <div>
-        <div className="flex justify-between px-1">
+        <div className="flex justify-between p-2 pl-0">
           <h1>{name}</h1>
-          <h1>{percent}</h1>
+          <h1>{percent}%</h1>
         </div>
         <ProgressBar
           className="mb-8 "
           completed={percent}
-          bgColor="grey"
+          height="10px"
+          customLabel=" "
+          bgColor="rgb(52 211 153)"
           animateOnRender={true}
         />
       </div>
@@ -28,9 +30,9 @@ const Resume = () => {
     return (
       <div
         id="education-card"
-        className="border border-gray-400 rounded-lg p-6 mb-8 hover:shadow-xl "
+        className="border border-gray-100 rounded-lg p-6 mb-8 hover:shadow-2xl duration-500 "
       >
-        <p className="text-center bg-cyan-800 rounded-lg inline-block px-4 ">
+        <p className="text-center text-white bg-emerald-400 rounded-lg inline-block px-4 ">
           {Year}
         </p>
         <h1 className="text-2xl py-2">{Title}</h1>
@@ -40,7 +42,7 @@ const Resume = () => {
   };
 
   return (
-    <div>
+    <div id="resume" className="m-4">
       <TitleCard title="SUMMARY" subTitle="Resume" />
       <div
         className="flex justify-center max-sm:flex-col max-sm:justify-center"
@@ -89,58 +91,3 @@ const Resume = () => {
 };
 
 export default Resume;
-/**
- *         <div className="ml-8 mr-4 w-1/2 max-w-xl max-sm:w-auto">
-          <ProgressBar
-            className="mb-8 "
-            completed={50}
-            bgColor="grey"
-            animateOnRender={true}
-          />
-          <ProgressBar
-            className="mb-8 "
-            completed={50}
-            bgColor="grey"
-            animateOnRender={true}
-          />
-          <ProgressBar
-            className="mb-8 "
-            completed={50}
-            bgColor="grey"
-            animateOnRender={true}
-          />
-        </div>
-                  <div
-            id="education-card"
-            className="border border-gray-400 rounded-lg p-6 mb-8">
-            <p className="text-center bg-cyan-800 rounded-lg inline-block px-4 ">
-              2014 - 2018
-            </p>
-            <h1 className="text-2xl py-2">Bachelor of Enginerring</h1>
-            <p>Savitribai Phule Pune University</p>
-          </div>
-          <div
-            id="education-card"
-            className="border border-gray-400 rounded-lg p-6 mb-8">
-            <p className="text-center bg-cyan-800 rounded-lg inline-block px-4 ">
-              2014 - 2018
-            </p>
-            <h1 className="text-2xl py-2">Bachelor of Enginerring</h1>
-            <p>Savitribai Phule Pune University</p>
-          </div>
-          <div
-            id="education-card"
-            className="border border-gray-400 rounded-lg p-6 mb-8">
-            <p className="text-center bg-cyan-800 rounded-lg inline-block px-4 ">
-              2014 - 2018
-            </p>
-            <h1 className="text-2xl py-2">Bachelor of Enginerring</h1>
-            <p>Savitribai Phule Pune University</p>
-          </div>
-
-
-
-
-
-        
- */

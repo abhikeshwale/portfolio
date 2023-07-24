@@ -1,7 +1,8 @@
-import React from "react";
+import React, { useRef } from "react";
 import TitleCard from "./TitleCard";
 import { Formik, Form, Field, ErrorMessage } from "formik";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import emailjs from "@emailjs/browser";
 import {
   faPhone,
   faEnvelope,
@@ -18,16 +19,34 @@ import {
 import ItemNameCard from "./ItemNameCard";
 
 const Contact = () => {
-  const handleSubmit = () => {
-    console.log("submitting form");
+  const form = useRef();
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs
+      .sendForm(
+        "service_h20w5iq",
+        "template_toir1e8",
+        form.current,
+        "U0txsxrL1V-ji4PKb"
+      )
+      .then(
+        (result) => {
+          console.log(result.text);
+        },
+        (error) => {
+          console.log(error.text);
+        }
+      );
+    e.target.reset();
   };
   return (
-    <div>
+    <div id="contact" className="bg-slate-50">
       <TitleCard title="GET IN TOUCH" subTitle="Contact" />
       <div className="flex justify-center  max-sm:flex-col max-sm:justify-center">
         <div
           id="address-container"
-          className="flex  flex-col gap-5 m-4 w-1/3 max-w-[440px] max-sm:w-auto"
+          className="flex  flex-col gap-5 m-4 w-1/4 max-w-[330px] max-sm:w-auto"
         >
           <div>
             <div className="flex cursor-text">
@@ -94,7 +113,7 @@ const Contact = () => {
         </div>
         <div
           id="contact-container"
-          className=" m-4 w-2/3 max-w-[880px] max-sm:w-auto  p-4 rounded-xl"
+          className=" m-4 w-3/4 max-w-[990px] max-sm:w-auto  p-4 rounded-xl"
         >
           <Formik
             initialValues={{
@@ -122,50 +141,49 @@ const Contact = () => {
             }}
           >
             {() => (
-              <Form className="flex">
-                <div className="flex flex-col gap-4 w-full">
-                  <div>
-                    <Field
-                      name="name"
-                      placeholder="Name"
-                      className="border rounded-md p-2 w-[100%]"
-                    />
-                    <div className="text-red-500 text-sm italic">
-                      <ErrorMessage name="name" />
+              <Form className="flex" onSubmit={sendEmail} ref={form}>
+                <div className="flex flex-col justify-center gap-4 w-full">
+                  <div className="flex justify-between gap-8">
+                    <div className="w-1/2">
+                      <Field
+                        id="name"
+                        name="name"
+                        type="text"
+                        placeholder="Name"
+                        autoComplete="off"
+                        className="border text-xl h-[50px] rounded-md p-2 w-[100%]"
+                      />
+                      <div className="text-red-500 text-sm italic">
+                        <ErrorMessage name="name" />
+                      </div>
                     </div>
-                  </div>
-                  <div>
-                    <Field
-                      name="email"
-                      placeholder="Email"
-                      className="border rounded-md p-2 w-[100%]"
-                    />
-                    <div className="text-red-500 text-sm italic">
-                      <ErrorMessage name="email" />
+                    <div className="w-1/2">
+                      <Field
+                        name="email"
+                        placeholder="Email"
+                        className="border text-xl h-[50px] rounded-md p-2 w-[100%]"
+                      />
+                      <div className="text-red-500 text-sm italic">
+                        <ErrorMessage name="email" />
+                      </div>
                     </div>
                   </div>
                   <div>
                     <Field
                       name="message"
                       placeholder="Your Message..."
-                      component="textarea"
-                      className="border rounded-md p-2 w-[100%] min-h-[70px]"
+                      className="border text-xl rounded-md p-2 w-[100%] min-h-[150px]"
                     />
                     <div className="text-red-500 text-sm italic">
                       <ErrorMessage name="message" />
                     </div>
                   </div>
-                  <div>
+                  <div className="flex justify-center                  ">
                     <button
                       type="submit"
-                      onSubmit={handleSubmit}
-                      className="ml-[35%] max-sm:ml-[25%] hover:shadow-xl hover:text-red-500 rounded-lg p-4 border hover:animate-pulse"
+                      className="border m-1 p-2 text-white h-[45px] w-52 duration-500 rounded-full px-3 bg-emerald-400 hover:bg-emerald-500 hover:shadow-[0 5px 15px rgba(0,0,0,.15)] "
                     >
-                      Send Message{" "}
-                      <FontAwesomeIcon
-                        icon={faPaperPlane}
-                        className="hover:animate-bounce"
-                      />
+                      Send Message
                     </button>
                   </div>
                 </div>

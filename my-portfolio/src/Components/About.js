@@ -1,8 +1,11 @@
-import React, { useState } from "react";
+import React from "react";
 import TitleCard from "./TitleCard";
 const About = () => {
   return (
-    <div className="pt-32 pb-32 flex flex-col justify-center m-4 items-center border border-red-500">
+    <div
+      id="about"
+      className="pt-32 pb-32 flex flex-col bg-slate-50 justify-center m-4 items-center"
+    >
       <TitleCard title="ABOUT ME" subTitle="Know Me More" />
       <div className="flex justify-center ">
         <div className="flex-col  w-2/3 max-w-2xl" id="about-container">

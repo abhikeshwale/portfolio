@@ -2,6 +2,7 @@ import React from "react";
 import { useTypewriter, Cursor } from "react-simple-typewriter";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCaretDown } from "@fortawesome/free-solid-svg-icons";
+import Head from "./Head";
 const Home = () => {
   const [text] = useTypewriter({
     words: [
@@ -16,23 +17,27 @@ const Home = () => {
   });
 
   return (
-    <div className="flex  flex-col max-w-full h-90v items-center  border-neutral-900 border justify-center">
-      <span className="text-7xl font-bold">
-        Hi ! I Am {text}
-        <Cursor />
-      </span>
-      <span className="text-xl m-4">Living in Yokohama, Japan</span>
-      <button className="border m-1 p-2 hover:scale-110 duration-75 rounded-full px-3 border-red-500 hover:border-2 hover:border-green-600 hover:bg-green-400">
-        About Me
-      </button>
-      <a href="/">
-        {" "}
-        <FontAwesomeIcon
-          icon={faCaretDown}
-          bounce
-          className="absolute bottom-0 pb-7"
-        />
-      </a>
+    <div>
+      <div className="flex text-white flex-col max-w-full h-90v items-center gap-5  justify-center">
+        <span className="  text-7xl font-bold">
+          I Am {text}
+          <Cursor />
+        </span>
+        <span className="text-xl m-4">Living in Yokohama, Japan</span>
+
+        <a href="#about">
+          <button className="border m-1 p-2 text-white h-[45px] w-52 duration-500 rounded-full px-3 bg-emerald-400 hover:bg-emerald-500 hover:shadow-[0 5px 15px rgba(0,0,0,.15)] ">
+            About Me
+          </button>
+        </a>
+        <a href="#about" className="duration-75">
+          <FontAwesomeIcon
+            icon={faCaretDown}
+            bounce
+            className="absolute bottom-0 pb-7"
+          />
+        </a>
+      </div>
     </div>
   );
 };
