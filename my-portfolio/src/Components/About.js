@@ -7,13 +7,13 @@ const About = () => {
       className="pt-32 pb-32 flex flex-col bg-slate-50 justify-center m-4 items-center"
     >
       <TitleCard title="ABOUT ME" subTitle="Know Me More" />
-      <div className="flex justify-center ">
-        <div className="flex-col  w-2/3 max-w-2xl" id="about-container">
-          <h2 className="text-3xl font-bold">
-            I'm <span className="text-blue-300">Abhikesh Wale,</span> a FrontEnd
-            Developer
+      <div className="flex justify-between ">
+        <div className="flex-col pt-4  " id="about-container">
+          <h2 className="text-3xl font-bold leading-10">
+            I'm <span className="text-emerald-400">Abhikesh Wale,</span> a
+            FrontEnd Developer
           </h2>
-          <p className="text-base">
+          <p className="text-base leading-loose">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
             eiusmod tempor incis nostrud exerlaborum.
           </p>
@@ -27,24 +27,24 @@ const About = () => {
           className="flex flex-1 flex-col w-1/3 max-w-md"
           id="personal-info-container"
         >
-          <table>
-            <tr>
-              <td>
+          <table className="">
+            <tr className="border-b ">
+              <td className="p-4">
                 <b>Name</b>: Abhikesh Wale
               </td>
             </tr>
-            <tr>
-              <td>
+            <tr className="border-b">
+              <td className="p-4">
                 <b>Email:</b> abhikeshwale@gmail.com
               </td>
             </tr>
-            <tr>
-              <td>
+            <tr className="border-b">
+              <td className="p-4">
                 <b>Age:</b> 27
               </td>
             </tr>
-            <tr>
-              <td>
+            <tr className="border-b">
+              <td className="p-4">
                 <b>From:</b> Maharashtra, India
               </td>
             </tr>

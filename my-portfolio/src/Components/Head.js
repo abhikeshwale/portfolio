@@ -27,7 +27,7 @@ const Head = () => {
         height: "8vh",
       }}
       id="navbar"
-      className="flex text-white max-w-full justify-between mt-0 drop-shadow-xl sticky top-0 z-50 "
+      className="flex  max-w-full justify-between mt-0 drop-shadow-xl sticky top-0 z-50 "
     >
       <div className="flex-1 ml-8 items-center flex gap-8">
         <a href="/">

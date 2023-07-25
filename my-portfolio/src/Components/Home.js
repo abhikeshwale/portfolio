@@ -18,7 +18,7 @@ const Home = () => {
 
   return (
     <div>
-      <div className="flex text-white flex-col max-w-full h-90v items-center gap-5  justify-center">
+      <div className="flex  flex-col max-w-full h-90v items-center gap-5  justify-center">
         <span className="  text-7xl font-bold">
           I Am {text}
           <Cursor />

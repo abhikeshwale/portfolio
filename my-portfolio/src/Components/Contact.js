@@ -3,6 +3,8 @@ import TitleCard from "./TitleCard";
 import { Formik, Form, Field, ErrorMessage } from "formik";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import emailjs from "@emailjs/browser";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 import {
   faPhone,
   faEnvelope,
@@ -17,6 +19,11 @@ import {
   faTwitter,
 } from "@fortawesome/free-brands-svg-icons";
 import ItemNameCard from "./ItemNameCard";
+import {
+  EMAIL_SERVICE_ID,
+  EMAIL_TEMPLATE_ID,
+  EMAIL_USER_API,
+} from "../Utils/Data";
 
 const Contact = () => {
   const form = useRef();
@@ -25,14 +32,15 @@ const Contact = () => {
 
     emailjs
       .sendForm(
-        "service_h20w5iq",
-        "template_toir1e8",
+        EMAIL_SERVICE_ID,
+        EMAIL_TEMPLATE_ID,
         form.current,
-        "U0txsxrL1V-ji4PKb"
+        EMAIL_USER_API
       )
       .then(
         (result) => {
           console.log(result.text);
+          toast("Email is Sent ! ✔");
         },
         (error) => {
           console.log(error.text);
@@ -190,6 +198,18 @@ const Contact = () => {
               </Form>
             )}
           </Formik>
+          <ToastContainer
+            position="bottom-center"
+            autoClose={5000}
+            hideProgressBar={false}
+            newestOnTop={false}
+            closeOnClick
+            rtl={false}
+            pauseOnFocusLoss
+            draggable
+            pauseOnHover
+            theme="dark"
+          />
         </div>
       </div>
     </div>
