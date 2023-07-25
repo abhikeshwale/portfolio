@@ -21,7 +21,7 @@ const ScrollToTop = () => {
     });
   };
   return (
-    <button onClick={scroll} style={{display: isVisible ? 'block':'none'}} className=" h-[20px] fixed  bottom-[50px] right-[50px] animate-pulse hover:scale-125 hover:animate-none text-violet-400 hover:text-violet-500 ">
+    <button onClick={scroll} style={{display: isVisible ? 'block':'none'}} className=" h-[20px] fixed  bottom-[50px] right-[50px] animate-pulse hover:scale-125 hover:animate-none text-2xl duration-700 text-emerald-700 hover:text-emerald-500 ">
       <FontAwesomeIcon className="" icon={faCircleChevronUp} />
     </button>
   );

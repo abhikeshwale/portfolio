@@ -9,9 +9,9 @@ import ScrollToTop from "./Components/ScrollToTop";
 
 function App() {
   return (
-    <div className="overflow-hidden bg-violet-100 scroll-smooth">
+    <div className="overflow-hidden scroll-smooth">
          <ScrollToTop />
-         <Head></Head>
+ 
       <Home></Home>
       <About />
       <Resume />

@@ -1,7 +1,10 @@
-import React from "react";
+import React, { useRef } from "react";
 import TitleCard from "./TitleCard";
 import { Formik, Form, Field, ErrorMessage } from "formik";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import emailjs from "@emailjs/browser";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 import {
   faPhone,
   faEnvelope,
@@ -16,15 +19,39 @@ import {
   faTwitter,
 } from "@fortawesome/free-brands-svg-icons";
 import ItemNameCard from "./ItemNameCard";
+import {
+  EMAIL_SERVICE_ID,
+  EMAIL_TEMPLATE_ID,
+  EMAIL_USER_API,
+} from "../Utils/Data";
 
 const Contact = () => {
-  const handleSubmit = () => {
-    console.log("submitting form");
+  const form = useRef();
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs
+      .sendForm(
+        EMAIL_SERVICE_ID,
+        EMAIL_TEMPLATE_ID,
+        form.current,
+        EMAIL_USER_API
+      )
+      .then(
+        (result) => {
+          console.log(result.text);
+          toast("Email is Sent ! ✔");
+        },
+        (error) => {
+          console.log(error.text);
+        }
+      );
+    e.target.reset();
   };
   return (
-    <div id="contact">
+    <div id="contact" className="bg-slate-50 py-32">
       <TitleCard title="GET IN TOUCH" subTitle="Contact" />
-      <div className="flex justify-center  max-sm:flex-col max-sm:justify-center">
+      <div className="flex justify-center pt-7 max-sm:flex-col max-sm:justify-center">
         <div
           id="address-container"
           className="flex  flex-col gap-5 m-4 w-1/4 max-w-[330px] max-sm:w-auto"
@@ -122,13 +149,16 @@ const Contact = () => {
             }}
           >
             {() => (
-              <Form className="flex">
+              <Form className="flex" onSubmit={sendEmail} ref={form}>
                 <div className="flex flex-col justify-center gap-4 w-full">
                   <div className="flex justify-between gap-8">
                     <div className="w-1/2">
                       <Field
+                        id="name"
                         name="name"
+                        type="text"
                         placeholder="Name"
+                        autoComplete="off"
                         className="border text-xl h-[50px] rounded-md p-2 w-[100%]"
                       />
                       <div className="text-red-500 text-sm italic">
@@ -150,7 +180,6 @@ const Contact = () => {
                     <Field
                       name="message"
                       placeholder="Your Message..."
-                      component="textarea"
                       className="border text-xl rounded-md p-2 w-[100%] min-h-[150px]"
                     />
                     <div className="text-red-500 text-sm italic">
@@ -160,20 +189,27 @@ const Contact = () => {
                   <div className="flex justify-center                  ">
                     <button
                       type="submit"
-                      onSubmit={handleSubmit}
-                      className="border m-1 p-2 hover:scale-110 duration-75 rounded-full px-3 border-orange-400 hover:border-2 hover:bg-orange-300 hover:border-orange-600 "
-                      >
+                      className="border m-1 p-2 text-white h-[45px] w-52 duration-500 rounded-full px-3 bg-emerald-400 hover:bg-emerald-500 hover:shadow-[0 5px 15px rgba(0,0,0,.15)] "
+                    >
                       Send Message
-                      <FontAwesomeIcon
-                        icon={faPaperPlane}
-                        className="hover:animate-bounce"
-                      />
                     </button>
                   </div>
                 </div>
               </Form>
             )}
           </Formik>
+          <ToastContainer
+            position="bottom-center"
+            autoClose={5000}
+            hideProgressBar={false}
+            newestOnTop={false}
+            closeOnClick
+            rtl={false}
+            pauseOnFocusLoss
+            draggable
+            pauseOnHover
+            theme="dark"
+          />
         </div>
       </div>
     </div>

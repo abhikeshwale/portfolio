@@ -10,10 +10,13 @@ module.exports = {
         pacifico: ["Damion", "cursive"],
       },
       backgroundImage: {
-        homeBg: "url(./assets/intro.png)",
+        bg: "url(./assets/Wallpaper-Emerald-Green.jpg)",
+        footer: "url(./assets/footer_image.jpg)"
+        
       },
     },
     height: {
+      "5v": "5vh",
       "10v": "10vh",
       "50v": "50vh",
       "100v": "100vh",
