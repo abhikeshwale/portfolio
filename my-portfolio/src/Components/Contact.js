@@ -8,7 +8,6 @@ import "react-toastify/dist/ReactToastify.css";
 import {
   faPhone,
   faEnvelope,
-  faPaperPlane,
   faLocationDot,
 } from "@fortawesome/free-solid-svg-icons";
 import {
