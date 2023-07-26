@@ -1,4 +1,4 @@
-export const EMAIL_TEMPLATE_ID = "template_toir1e8";
+export const EMAIL_TEMPLATE_ID = "template_zb7yybq";
 export const EMAIL_USER_API = "U0txsxrL1V-ji4PKb";
 export const EMAIL_SERVICE_ID = "service_h20w5iq";
 export const SKILLS = {
