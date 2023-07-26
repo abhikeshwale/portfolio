@@ -42,10 +42,10 @@ const Resume = () => {
   };
 
   return (
-    <div id="resume" className="m-4">
+    <div id="resume" className=" py-32">
       <TitleCard title="SUMMARY" subTitle="Resume" />
       <div
-        className="flex justify-center max-sm:flex-col max-sm:justify-center"
+        className="flex justify-center pt-7 max-sm:flex-col max-sm:justify-center"
         id="summary-container"
       >
         <div

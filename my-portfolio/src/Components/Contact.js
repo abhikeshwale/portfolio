@@ -8,7 +8,6 @@ import "react-toastify/dist/ReactToastify.css";
 import {
   faPhone,
   faEnvelope,
-  faPaperPlane,
   faLocationDot,
 } from "@fortawesome/free-solid-svg-icons";
 import {
@@ -49,9 +48,9 @@ const Contact = () => {
     e.target.reset();
   };
   return (
-    <div id="contact" className="bg-slate-50">
+    <div id="contact" className="bg-slate-50 py-32">
       <TitleCard title="GET IN TOUCH" subTitle="Contact" />
-      <div className="flex justify-center  max-sm:flex-col max-sm:justify-center">
+      <div className="flex justify-center pt-7 max-sm:flex-col max-sm:justify-center">
         <div
           id="address-container"
           className="flex  flex-col gap-5 m-4 w-1/4 max-w-[330px] max-sm:w-auto"

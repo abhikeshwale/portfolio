@@ -8,9 +8,11 @@ import {
 } from "@fortawesome/free-brands-svg-icons";
 
 const Head = () => {
-  const [navColor, setnavColor] = useState("rgb(248 250 252)");
+  const [navColor, setnavColor] = useState("");
   const listenScrollEvent = () => {
-    window.scrollY > 10 ? setnavColor("rgb(0 0 0") : setnavColor("transparent");
+    window.scrollY > 100
+      ? setnavColor("rgb(0 0 0")
+      : setnavColor("transparent");
   };
   useEffect(() => {
     window.addEventListener("scroll", listenScrollEvent);
@@ -24,10 +26,10 @@ const Head = () => {
       style={{
         backgroundColor: navColor,
         transition: "all 1s",
-        height: "8vh",
+        height: "10vh",
       }}
       id="navbar"
-      className="flex  max-w-full justify-between mt-0 drop-shadow-xl sticky top-0 z-50 "
+      className="flex  bg-opacity-0  shadow-emerald-400 justify-between mt-0  fixed w-full top-0 z-50 "
     >
       <div className="flex-1 ml-8 items-center flex gap-8">
         <a href="/">
@@ -36,26 +38,26 @@ const Head = () => {
       </div>
       <div className="flex flex-1 items-center justify-center font-normal">
         <div className="flex-10 ">
-          <ul className=" text-base flex gap-8 ml-16 hover:cursor-pointer ">
+          <ul className=" text-base  flex gap-8 ml-16 hover:cursor-pointer ">
             <a href="/">
-              <li className="hover:scale-125 hover:font-bold hover:text-violet-700 duration-75">
+              <li className="drop-shadow-2xl hover:scale-125 hover:font-bold hover:text-emerald-200 duration-75">
                 Home
               </li>
             </a>
             <a href="#about">
-              <li className="hover:scale-125 hover:font-bold hover:text-violet-700 duration-75">
+              <li className="hover:scale-125 hover:font-bold  hover:text-emerald-200 duration-75">
                 About
               </li>
             </a>
             <a href="#resume">
               {" "}
-              <li className="hover:scale-125 hover:font-bold  hover:text-violet-700 duration-75">
+              <li className="hover:scale-125 hover:font-bold   hover:text-emerald-200 duration-75">
                 Resume
               </li>
             </a>
             <a href="#contact">
               {" "}
-              <li className="hover:scale-125 hover:font-bold hover:text-violet-700 duration-75">
+              <li className="hover:scale-125 hover:font-bold  hover:text-emerald-200 duration-75">
                 Contact
               </li>
             </a>
@@ -64,7 +66,7 @@ const Head = () => {
       </div>
       <div className="flex flex-1 items-center  font-normal">
         <div className="flex-10">
-          <ul className="flex justify-between gap-8 mr-8">
+          <ul className="flex  max-sm:hidden justify-between gap-8 mr-8">
             <li>
               <a href="https://www.instagram.com/abhikesh_wale/">
                 <FontAwesomeIcon
