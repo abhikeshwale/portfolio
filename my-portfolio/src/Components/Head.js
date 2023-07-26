@@ -38,24 +38,24 @@ const Head = () => {
         <div className="flex-10 ">
           <ul className=" text-base  flex gap-8 ml-16 hover:cursor-pointer ">
             <a href="/">
-              <li className="drop-shadow-2xl hover:scale-125 hover:font-bold hover:text-emerald-200 duration-75">
+              <li className="drop-shadow-2xl hover:scale-125 hover:font-bold duration-300 hover:text-emerald-200 ">
                 Home
               </li>
             </a>
             <a href="#about">
-              <li className="hover:scale-125 hover:font-bold  hover:text-emerald-200 duration-75">
+              <li className="hover:scale-125 hover:font-bold duration-300  hover:text-emerald-200 ">
                 About
               </li>
             </a>
             <a href="#resume">
               {" "}
-              <li className="hover:scale-125 hover:font-bold   hover:text-emerald-200 duration-75">
+              <li className="hover:scale-125 hover:font-bold   hover:text-emerald-200 duration-300">
                 Resume
               </li>
             </a>
             <a href="#contact">
               {" "}
-              <li className="hover:scale-125 hover:font-bold  hover:text-emerald-200 duration-75">
+              <li className="hover:scale-125 hover:font-bold  hover:text-emerald-200 duration-300">
                 Contact
               </li>
             </a>
@@ -69,7 +69,7 @@ const Head = () => {
               <a href="https://www.instagram.com/abhikesh_wale/">
                 <FontAwesomeIcon
                   icon={faInstagram}
-                  className="hover:text-pink-600  cursor-pointer hover:scale-125 duration-75 "
+                  className="hover:text-pink-600  cursor-pointer hover:scale-125 duration-300 "
                   size="2xl"
                 />
               </a>
@@ -78,7 +78,7 @@ const Head = () => {
               <a href="https://www.facebook.com/abhikesh.wale/">
                 <FontAwesomeIcon
                   icon={faFacebook}
-                  className="hover:text-blue-600 hover:scale-125 duration-75 cursor-pointer"
+                  className="hover:text-blue-600 hover:scale-125 duration-300 cursor-pointer"
                   size="2xl"
                 />{" "}
               </a>
@@ -87,7 +87,7 @@ const Head = () => {
               <a href="https://www.linkedin.com/in/abhikesh-wale-59a371a9/">
                 <FontAwesomeIcon
                   icon={faLinkedin}
-                  className="hover:text-blue-900  hover:scale-125 duration-75 cursor-pointer"
+                  className="hover:text-blue-900  hover:scale-125 duration-300 cursor-pointer"
                   size="2xl"
                 />
               </a>
@@ -96,7 +96,7 @@ const Head = () => {
               <a href="https://github.com/abhikeshwale">
                 <FontAwesomeIcon
                   icon={faGithub}
-                  className="hover:text-orange-500   hover:scale-125 duration-75 cursor-pointer"
+                  className="hover:text-orange-500   hover:scale-125 duration-300 cursor-pointer"
                   size="2xl"
                 />
               </a>

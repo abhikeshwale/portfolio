@@ -7,7 +7,7 @@ const About = () => {
       id="about"
       className="py-32 flex flex-col bg-slate-50 justify-center items-center">
       <TitleCard title="ABOUT ME" subTitle="Know Me More" />
-      <div className="flex justify-between pt-7 max-sm:flex-col">
+      <div className="flex justify-between pt-7 gap-12 max-sm:flex-col">
         <div className="flex-col pt-4 " id="about-container">
           <h2 className="text-3xl font-bold leading-10  pt-4  ">
             I'm <span className="text-emerald-400">Abhikesh Wale,</span> a

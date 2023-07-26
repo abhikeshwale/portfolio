@@ -20,6 +20,7 @@ const Home = () => {
     <div className="bg-bg bg-cover bg-opacity-80 text-white">
          <Head></Head>
       <div className="flex  flex-col max-w-full h-100v items-center gap-5  justify-center">
+        <h1 className="text-2xl text-emerald-100">Welcome</h1>
         <span className="  text-7xl font-bold">
           I Am {text}
           <Cursor />
