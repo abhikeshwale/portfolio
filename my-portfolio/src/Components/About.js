@@ -17,7 +17,7 @@ const About = () => {
           I am having 4.5+ years of experience in maintaining and building responsive web applications.
           </p>
           <p className="text-base  pt-4 ">
-          Having good knowledge in HTML, CSS, JavaScript and Modern Libraries and Frameworks like ReactJS. Passionate
+          Having good knowledge in HTML, CSS, JavaScript and Modern Libraries and Frameworks like ReactJS.<br/> Passionate
 about Web development along with JLPT N2 Japanese proficiency
           </p>
         </div>
