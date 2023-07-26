@@ -8,8 +8,8 @@ const About = () => {
       className="py-32 flex flex-col bg-slate-50 justify-center items-center"
     >
       <TitleCard title="ABOUT ME" subTitle="Know Me More" />
-      <div className="flex justify-between pt-7 max-sm:flex-col">
-        <div className="flex-col pt-4 " id="about-container">
+      <div className="flex justify-between pt-7 gap-20 max-sm:flex-col w-3/5">
+        <div className="flex-col pt-4 w-2/3" id="about-container">
           <h2 className="text-3xl font-bold leading-10  pt-4  ">
             I'm <span className="text-emerald-400">Abhikesh Wale,</span> a
             FrontEnd Developer
@@ -20,13 +20,15 @@ const About = () => {
           </p>
           <p className="text-base  pt-4 ">
             Having good knowledge in HTML, CSS, JavaScript and Modern Libraries
-            and Frameworks like ReactJS. Passionate about Web development along
-            with JLPT N2 Japanese proficiency
+            and Frameworks like ReactJS. <br></br> Passionate about Web
+            development along with JLPT N2 Japanese proficiency
           </p>
         </div>
-        <div className="flex flex-col" id="personal-info-container">
-          <div className="flex flex-1 flex-col  max-sm:justify-center ">
-            {" "}
+        <div
+          className="flex flex-col max-sm:w-auto w-1/3"
+          id="personal-info-container"
+        >
+          <div className="flex flex-1 flex-col max-sm:justify-center ">
             <table className=" ">
               <tr className="border-b ">
                 <td className="p-4">
