@@ -5,7 +5,7 @@ const About = () => {
   return (
     <div
       id="about"
-      className="py-32 flex flex-col bg-slate-50 justify-center items-center">
+      className="py-32 px-4 flex flex-col bg-slate-50 justify-center items-center">
       <TitleCard title="ABOUT ME" subTitle="Know Me More" />
       <div className="flex justify-between pt-7 gap-12 max-sm:flex-col">
         <div className="flex-col pt-4 " id="about-container">

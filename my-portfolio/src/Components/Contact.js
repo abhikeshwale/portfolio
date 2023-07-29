@@ -48,7 +48,7 @@ const Contact = () => {
     e.target.reset();
   };
   return (
-    <div id="contact" className="bg-slate-50 py-32">
+    <div id="contact" className="bg-slate-50 py-32 px-4">
       <TitleCard title="GET IN TOUCH" subTitle="Contact" />
       <div className="flex justify-center pt-7 max-sm:flex-col max-sm:justify-center">
         <div
@@ -121,7 +121,7 @@ const Contact = () => {
         </div>
         <div
           id="contact-container"
-          className=" m-4 w-3/4 max-w-[990px] max-sm:w-auto  p-4 rounded-xl"
+          className="  w-3/4 max-w-[990px] max-sm:w-auto rounded-xl"
         >
           <Formik
             initialValues={{
@@ -149,10 +149,10 @@ const Contact = () => {
             }}
           >
             {() => (
-              <Form className="flex" onSubmit={sendEmail} ref={form}>
+              <Form className="flex" onSubmit={sendEmail} ref={form} >
                 <div className="flex flex-col justify-center gap-4 w-full">
-                  <div className="flex justify-between gap-8">
-                    <div className="w-1/2">
+                  <div className="flex justify-betweenn max-sm:flex-col gap-4">
+                    <div className="w-1/2 max-sm:w-full">
                       <Field
                         id="name"
                         name="name"
@@ -165,7 +165,7 @@ const Contact = () => {
                         <ErrorMessage name="name" />
                       </div>
                     </div>
-                    <div className="w-1/2">
+                    <div className="w-1/2  max-sm:w-full">
                       <Field
                         name="email"
                         placeholder="Email"
