@@ -84,36 +84,37 @@ const Contact = () => {
             <ItemNameCard name="FOLLOW ME" />
             <div className="flex justify-start ">
               <ul className="flex justify-between gap-5 mr-3 ">
+              <a href="https://www.linkedin.com/in/abhikesh-wale-59a371a9/">
                 <li>
                   <FontAwesomeIcon
                     icon={faLinkedin}
-                    className="hover:text-blue-900 cursor-pointer hover:animate-pulse text-2xl"
+                    className="hover:text-blue-900 cursor-pointer hover:scale-125 hover:font-bold duration-300  text-2xl"
                   />
-                </li>
-                <li>
+                </li></a>
+                <a href="https://github.com/abhikeshwale/portfolio">      <li>
                   <FontAwesomeIcon
                     icon={faGithub}
-                    className="hover:text-orange-500 cursor-pointer hover:animate-pulse text-2xl"
+                    className="hover:text-orange-500 hover:scale-125 hover:font-bold duration-300 cursor-pointer text-2xl"
                   />
-                </li>
-                <li>
+                </li></a>
+                <a href="https://www.instagram.com/abhikesh_wale/">   <li>
                   <FontAwesomeIcon
                     icon={faInstagram}
-                    className="hover:text-pink-600 cursor-pointer hover:animate-pulse text-2xl"
+                    className="hover:text-pink-600 hover:scale-125 hover:font-bold duration-300 cursor-pointer  text-2xl"
                   />
-                </li>
-                <li>
+                </li></a>
+                <a href="https://www.facebook.com/abhikesh.wale/">  <li>
                   <FontAwesomeIcon
                     icon={faFacebook}
-                    className="hover:text-blue-600 cursor-pointer hover:animate-pulse text-2xl"
+                    className="hover:text-blue-600 hover:scale-125 hover:font-bold duration-300 cursor-pointer  text-2xl"
                   />
-                </li>
-                <li>
+                </li></a>
+                <a href="https://twitter.com/home"> <li>
                   <FontAwesomeIcon
                     icon={faTwitter}
-                    className="hover:text-blue-600 cursor-pointer text-2xl"
+                    className="hover:text-blue-600 hover:scale-125 hover:font-bold duration-300 cursor-pointer text-2xl"
                   />
-                </li>
+                </li></a>
               </ul>
             </div>
           </div>
